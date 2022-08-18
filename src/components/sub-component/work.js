@@ -1,6 +1,6 @@
 export const Work = ({ project, imageUrl, desc, link }) => {
   return (
-    <div className="hero md:w-10/12 shadow-xl group my-4">
+    <div className="hero md:w-9/12 shadow-xl group my-4 ">
       <figure>
         <img src={imageUrl} alt="spotlight" />
       </figure>
