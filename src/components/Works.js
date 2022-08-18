@@ -11,9 +11,7 @@ export const Works = () => {
                 project={"Trim-Down"}
                 imageUrl={trimdown}
                 desc={'My latest project collaborating with a team'}
-                link={'https://strategic-home-inspection.herokuapp.com/'} />
-
-           
+                link={'https://trim-down.herokuapp.com/'} />
 
             <Work 
                 project={"Home Inspection"}
