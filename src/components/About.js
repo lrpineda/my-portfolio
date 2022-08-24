@@ -4,7 +4,7 @@ export const About = () => {
   return (
     <div className="min-h-screen flex bg-gradient-to-r from-orange-500 to-pink-500 ">
       <div className="py-16 w-11/12 mx-auto">
-        <h1 className="text-4xl logo text-white text-center md:text-left" id='About'>
+        <h1 className="text-4xl logo text-white text-center md:text-left">
           About Me
         </h1>
         <div className="flex flex-col md:flex-row py-5 text-2xl lg:text-3xl text-white items-center">

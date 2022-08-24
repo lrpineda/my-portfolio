@@ -1,4 +1,5 @@
 import { FiMenu } from "react-icons/fi";
+import resumePdf from '../assets/my-resume.pdf'
 
 const Nav = ({ setCurrentPage }) => {
   return (
@@ -32,7 +33,7 @@ const Nav = ({ setCurrentPage }) => {
             </a>
           </li>
           <li>
-            <a>Resume</a>
+            <a a href={resumePdf} target={"_blank"} rel="noreferrer">Resume</a>
           </li>
         </ul>
       </div>

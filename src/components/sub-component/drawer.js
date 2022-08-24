@@ -1,3 +1,4 @@
+import resumePdf from '../../assets/my-resume.pdf'
 
 const Drawer = ({setCurrentPage}) => {
     return (
@@ -7,7 +8,7 @@ const Drawer = ({setCurrentPage}) => {
                 <li><a onClick={() => setCurrentPage('About')} href="#About">About</a></li>
                 <li><a onClick={() => setCurrentPage('Work')} href="#Work">Work</a></li>
                 <li><a onClick={() => setCurrentPage('Contact')} href="#Contact">Contact</a></li>
-                <li><a>Resume</a></li>
+                <li><a href={resumePdf} target={"_blank"} rel="noreferrer">Resume</a></li>
             </ul>
         </div>
     );

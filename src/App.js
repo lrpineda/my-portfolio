@@ -26,7 +26,7 @@ function App() {
   }
    
   return (
-    <div className="drawer drawer-end">
+    <div data-theme="dark" className="drawer drawer-end">
       <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         <Nav setCurrentPage={setCurrentPage} />
