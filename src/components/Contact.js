@@ -33,12 +33,9 @@ export const Contact = () => {
             <h1 className="logo text-white text-center text-4xl">Contact Me</h1>
             <div className="w-full py-6 md:w-4/6 my-6">
                 <form 
-                    onSubmit={handleSubmit}
-                    action="mailto:luicks212@gmail.com"
-                    method="POST"
-                    encType="multipart/form-data"
-                    name="EmailForm">
-
+                    action="https://formsubmit.co/luicks212@gmail.com"
+                    method="POST">
+                <input type="hidden" name="_captcha" value="false"/>
                 <input type="text" name="name" placeholder="Name" defaultValue={name} onBlur={handleChange} class="input w-full my-2 bg-white" />
             
                 <input type="text" name="email" defaultValue={email} onBlur={handleChange}  placeholder="Email" class="input w-full my-2 bg-white" />
