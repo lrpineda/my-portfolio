@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Luis Pineda",
+  "name": "Luis Pineda Portfolio",
+  "description": "My name is Luis I am a web developer and this is my portfolio",
   "icons": [
     {
       "src": "favicon.ico",
