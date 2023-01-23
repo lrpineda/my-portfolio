@@ -2,9 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://use.typekit.net/bbv6ovv.css");
-
-.logo {
-    font-family: bungee, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap'); 

@@ -1,39 +1,17 @@
-import React from "react";
-import { Nav } from "./nav";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { motion } from "framer-motion";
+import React from 'react'
+import { Nav } from './nav'
+type Props = {
+  dark: boolean;
+}
 
-type Props = {};
+function Header({dark}: Props) {
+  return (
+    <header className={`sticky top-0 max-w-7xl p-7 flex justify-between mx-auto z-10 snap-start ${dark ? 'text-white': 'text-black'} `}>
+      <h1 className='text-xl lg:text-[24px] font-thin tracking-wider'>LUIS PINEDA</h1>
+      <Nav dark={dark} />
+    </header>
+  )
 
-const Header = (props: Props) => {
-    return (
-        <header className="flex items-center justify-between p-4 ">
-            {/* logo */}
-            <motion.div
-                initial={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.6 }}
-                animate={{
-                    opacity: 1,
-                    x: 0,
-                    transition: { type: "spring", stiffness: 300, damping: 24 },
-                }}
-                className="text-2xl logo text-white shadow-md "
-            >
-                Luis Pineda
-            </motion.div>
-            {/* mobile icon */}
-            <motion.div
-                initial={{ opacity: 0, x: 100 }}
-                transition={{ duration: 0.6 }}
-                animate={{
-                    opacity: 1,
-                    x: 0,
-                }}
-            >
-                <Bars3Icon className="h-6 w-6 text-white md:hidden" />
-            </motion.div>
-        </header>
-    );
-};
+}
 
-export default Header;
+export default Header

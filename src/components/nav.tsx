@@ -1,5 +1,4 @@
-import { Fragment } from "react";
-import { Link } from "react-router-dom";
+
 
 const navigation: string[] = [
     'About',
@@ -11,13 +10,14 @@ const navigation: string[] = [
 
 
 
-export const Nav = () => {
+export const Nav = ({dark}:any) => {
+    
     return (
-        <nav>
-            <ul>
+        <nav className={`lg:flex items-center  hidden lg:visible `}>
+            <ul className="flex flex-row items-center space-x-4">
                 {navigation.map((item) => (
-                    <li key={item}>
-                        <Link to={`/${item.toLowerCase()}`}>{item}</Link>
+                    <li  key={item}>
+                        <a href={`#${item.toLowerCase()}`} className={`${dark ? 'text-white': 'text-black'}  text-xl font-thin`}>{item}</a>
                     </li>
                 ))}
             </ul>
