@@ -4,7 +4,8 @@ import React from 'react'
 
 type Props = {
     skillName: string,
-    percentage: string
+    percentage: string,
+    
 }
 
 const Skill = ({skillName, percentage}: Props) => {

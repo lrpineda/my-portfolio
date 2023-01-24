@@ -20,6 +20,7 @@ const Skills = (props: Props) => {
             <Skill skillName='sql' percentage='96%'/>
             <Skill skillName='tailwind' percentage='100%'/>
             <Skill skillName='ts' percentage='95%'/>
+            <Skill skillName='framer' percentage='90%'/>
        </div>
     </div>
   )
