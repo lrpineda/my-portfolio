@@ -1,9 +1,8 @@
-
+import { motion } from "framer-motion";
 
 const navigation: string[] = [
     'About',
     'Projects',
-    'Algorithms',
     'Contact',
     'Resume',
 ];
@@ -13,7 +12,11 @@ const navigation: string[] = [
 export const Nav = ({dark}:any) => {
     
     return (
-        <nav className={`lg:flex items-center  hidden lg:visible `}>
+        <motion.div 
+            initial={{ opacity: 0, x: 200 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+            className={`lg:flex items-center  hidden lg:visible `}>
             <ul className="flex flex-row items-center space-x-4">
                 {navigation.map((item) => (
                     <li  key={item}>
@@ -21,6 +24,6 @@ export const Nav = ({dark}:any) => {
                     </li>
                 ))}
             </ul>
-        </nav>
+        </motion.div>
     );
 };

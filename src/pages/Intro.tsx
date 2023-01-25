@@ -47,13 +47,13 @@ function Intro() {
           <motion.h1 variants={item}>LUIS PINEDA </motion.h1>
         </motion.div>
         <motion.div
-          initial={{ y: 3, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: 3, visibility: 'hidden' }}
+          animate={{ y: 0, visibility: 'visible' }}
           transition={{
             delay: 1.7,
             type: 'spring',
             stiffness: 40,
-            damping: 0
+            damping: 0,
           }}
           className='flex flex-col items-center'>
 
