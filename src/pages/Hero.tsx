@@ -17,7 +17,7 @@ export const Hero = ({ setDark }: any) => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.7 }}
                         viewport={{ once: true }}
-                        className='text-5xl md:text-7xl  xl:text-8xl text-center px-3 py-12 2xl:max-w-7xl'>
+                        className='text-4xl md:text-7xl  xl:text-8xl text-center px-3 py-12 2xl:max-w-7xl'>
                         I am a Computer Engineer specializing in web development, building full stack solutions.
                     </motion.h2>
                     <motion.div
@@ -31,10 +31,10 @@ export const Hero = ({ setDark }: any) => {
                         }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.5 }}
-                        className='bg-[#274A71] rounded-t-full w-[700px] overflow-visible relative h-2/4 my-16 z-10 flex justify-center items-center'>
+                        className='bg-[#274A71] rounded-t-full  md:w-[700px] overflow-visible relative h-2/4 my-16 z-10 flex justify-center items-center'>
                         <motion.img
 
-                            src={me} alt="A picture of me " className=' grayscale -top-36 scale-x-[-1] w-full'
+                            src={me} alt="A picture of me " className=' grayscale relative -top-[26px]  md:-top-36 scale-x-[-1] w-full'
 
                         />
                     </motion.div>
