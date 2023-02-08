@@ -6,21 +6,23 @@ import SubMenu from './components/SubMenu';
 import Header from './components/Header';
 import { About } from './pages/about';
 import Skills from './pages/Skills';
+import Projects from './pages/Projects';
 
 
 
 function App() {
   const [dark, setDark] = useState(false);
   return (
-    <div className="h-screen snap-y snap-mandatory overflow-scroll md:visible text-black bg-slate-50 z-0 ">
+    <div className="h-screen  snap-y snap-mandatory overflow-scroll md:visible text-black bg-slate-50 z-0 ">
       
         <Intro />
         <Header dark={dark} />
         <Hero setDark={setDark} />
-        <SubMenu setDark={setDark} dark title='ABOUT ME'></SubMenu>
+        <SubMenu setDark={setDark} dark={true} title='about'></SubMenu>
         <About />
-        <Skills />
-     
+        <Skills setDark={setDark}/>
+        <SubMenu dark={false} setDark={setDark} title='projects' />
+        <Projects />
     </div>
 
   );
