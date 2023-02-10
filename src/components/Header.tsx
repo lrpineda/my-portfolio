@@ -13,7 +13,7 @@ function Header({dark}: Props) {
       whileInView={{opacity: 1, y: 0}}
       transition={{delay: 0.3}}
 
-      className={`sticky top-0 max-w-7xl p-7 flex justify-between mx-auto z-10  ${dark ? 'text-white': 'text-black'} `}>
+      className={`sticky top-0 max-w-7xl p-4 md:p-7 flex justify-between mx-auto z-10  ${dark ? 'text-white': 'text-black'} `}>
       <motion.h1 
         initial={{ opacity: 0, x: -100 }}
         whileInView={{opacity: 1, x: 0}}

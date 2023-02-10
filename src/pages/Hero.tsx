@@ -10,12 +10,12 @@ export const Hero = ({ setDark }: any) => {
     }
     return (
         <>
-            <div ref={ref} className="h-screen w-screen snap-end">
-                <div className=' flex justify-between items-center  flex-col h-screen overflow-hidden pt-16 z-10'>
+            <div ref={ref} className="md:h-screen w-screen snap-end">
+                <div className=' flex justify-between items-center gap-y-[100px] md:gap-0  flex-col md:h-screen overflow-hidden md:pt-16 '>
                     <motion.h2
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.7 }}
+                        initial={{ opacity: 0, y: -200 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5, duration: 0.25, type: 'spring', stiffness: 200 }}
                         viewport={{ once: true }}
                         className='text-4xl md:text-7xl  xl:text-8xl text-center px-3 py-12 2xl:max-w-7xl'>
                         I am a Computer Engineer specializing in web development, building full stack solutions.
@@ -23,18 +23,18 @@ export const Hero = ({ setDark }: any) => {
                     <motion.div
                         initial={{
                             opacity: 0,
-                            y: 400
+                            y: 200
                         }}
                         whileInView={{
                             opacity: 1,
                             y: 0,
                         }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.5 }}
-                        className='bg-[#274A71] rounded-t-full  md:w-[700px] overflow-visible relative h-2/4 my-16 z-10 flex justify-center items-center'>
+                        transition={{ delay: 0.5, duration: 0.5 }}
+                        className='bg-[#274A71] rounded-t-full  md:w-[600px] overflow-visible relative h-96 md:h-[400px] z-10 flex justify-center items-center'>
                         <motion.img
 
-                            src={me} alt="A picture of me " className=' grayscale relative -top-[26px]  md:-top-36 scale-x-[-1] w-full'
+                            src={me} alt="A picture of me " className=' grayscale relative -top-[26px]  md:-top-8 scale-x-[-1] w-full'
 
                         />
                     </motion.div>

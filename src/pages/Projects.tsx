@@ -8,7 +8,7 @@ const Projects = () => {
 
   return (
     <div className='h-screen w-screen snap-center justify-center mx-auto flex gap-6 flex-col items-center'>
-        <div className='grid grid-cols-2 gap-5'>
+        {/* <div className='grid grid-cols-2 gap-5'>
           {cards.map((card, i) =>(
             <motion.div
               className={selectedId === card ? 'rounded-xl bg-gray-200 w-2/3 h-2/3 shadow-2xl absolute top-0 bottom-0 right-0 left-0 mx-auto cursor-pointer z-10' : 'rounded-xl cursor-pointer bg-gray-200 w-96 h-64'}
@@ -34,7 +34,7 @@ const Projects = () => {
           </motion.div>
 
 
-        </div>
+        </div> */}
         <h3 className='text-xl'>Click/Tap to open the details about each project.</h3>
     </div>
   )

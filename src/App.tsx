@@ -13,7 +13,7 @@ import Projects from './pages/Projects';
 function App() {
   const [dark, setDark] = useState(false);
   return (
-    <div className="h-screen  snap-y snap-mandatory overflow-scroll md:visible text-black bg-slate-50 z-0 ">
+    <div className="h-full md:h-screen  snap-y snap-mandatory overflow-scroll md:visible text-black bg-slate-50 z-0 ">
       
         <Intro />
         <Header dark={dark} />
