@@ -13,7 +13,7 @@ import Projects from './pages/Projects';
 function App() {
   const [dark, setDark] = useState(false);
   return (
-    <div className="h-full md:h-screen  snap-y snap-mandatory overflow-scroll md:visible text-black bg-slate-50 z-0 ">
+    <div className="h-full snap-y snap-mandatory md:visible text-black bg-slate-50 z-0 ">
       
         <Intro />
         <Header dark={dark} />
@@ -22,7 +22,8 @@ function App() {
         <About />
         <Skills setDark={setDark}/>
         <SubMenu dark={false} setDark={setDark} title='projects' />
-        <Projects />
+        <Projects setDark={setDark} />
+        <SubMenu dark={true} setDark={setDark} title='contact' />
     </div>
 
   );

@@ -11,6 +11,7 @@ const container = {
         transition: {
             delayChildren: 0.6,
             staggerChildren: 0.4,
+            duration: 0.25
         }
     }
 }
@@ -26,7 +27,7 @@ const item = {
 
 export const About = () => {
   return (
-    <div className="bg-[#232425] flex items-center justify-center pb-14 md:h-screen text-white snap-center">
+    <div className="bg-[#232425] flex items-center justify-center pb-14 md:h-screen text-white snap-center snap-always">
       <div className="md:max-w-7xl flex flex-col md:flex-row overflow-y-scroll">
         <motion.div
           initial={{ x: -200, opacity: 0 }}

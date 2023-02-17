@@ -1,41 +1,30 @@
-import React, { useState, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import React, { useEffect } from 'react'
+import projectData from '../resources/projectData'
+import Project from '../components/Project/Project'
+import { useInView } from "react-intersection-observer";
 
-const cards = [1,2,3,4]
+type Props = {
+  setDark: any;
+}
 
-const Projects = () => {
-  const [selectedId, setSelectedId] = useState(null);
+const Projects = ({setDark}:Props) => {
+  const { ref, inView } = useInView({ threshold: 0.7 });
+  useEffect(() => {
+    if (inView) {
+      setDark(false);
+    }
+  }, [inView]);
 
   return (
-    <div className='h-screen w-screen snap-center justify-center mx-auto flex gap-6 flex-col items-center'>
-        {/* <div className='grid grid-cols-2 gap-5'>
-          {cards.map((card, i) =>(
-            <motion.div
-              className={selectedId === card ? 'rounded-xl bg-gray-200 w-2/3 h-2/3 shadow-2xl absolute top-0 bottom-0 right-0 left-0 mx-auto cursor-pointer z-10' : 'rounded-xl cursor-pointer bg-gray-200 w-96 h-64'}
-              key={i}
-              layout
-              drag={selectedId === card ? 'x' : false}
-              >
-                {selectedId === card && (
-                  <>
-                    <div className='bg-white h-full w-full rounded-2xl' />
-                    <div className='bg-white h-full w-full rounded-2xl' />
-                    <div className='bg-white h-full w-full rounded-2xl' />
+    <div ref={ref}  className='pt-8 md:pt-0 bg-slate-50 md:h-screen md:w-screen relative overflow-scroll flex flex-col gap-3 snap-center snap-always items-center justify-center z-0 '>
+      <ul className='flex overflow-y-scroll  flex-col md:grid md:grid-cols-3 items-center gap-4 max-w-3xl'>
+        {projectData.map((project, index) => (
+          <Project {...project} key={index} />
+        ))}
 
-                  </>
-                )}
-              </motion.div>
+      </ul>
 
-          ))}
-          <motion.div 
-            className='absolute h-screen w-screen left-0 top-0 bg-black opacity-0 pointer-events-none'
-            animate={{opacity:selectedId? 0.3:0}}>
-
-          </motion.div>
-
-
-        </div> */}
-        <h3 className='text-xl'>Click/Tap to open the details about each project.</h3>
+      <h3 className='text-xl text-center pb-8'>Click/Tap to open the details about each project.</h3>
     </div>
   )
 }
