@@ -1,4 +1,4 @@
-import { motion, useDeprecatedInvertedScale} from 'framer-motion'
+import { motion } from 'framer-motion'
 import { closeSpring } from '../../utils/animations'
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 const Image = ({image, isVisible}: Props) => {
     return (
         <motion.div
-        className={`absolute top-0 left-0 bottom-0 overflow-hidden w-full h-[500px] pointer-events-none `}>
+        className={`absolute top-0 left-0 bottom-0 overflow-hidden w-full h-[500px] xl:h-[540px] pointer-events-none `}>
         <motion.img
           src={`images/${image}`}
           alt=""

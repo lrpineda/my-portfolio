@@ -28,7 +28,7 @@ const item = {
 export const About = () => {
   return (
     <div className="bg-[#232425] flex items-center justify-center pb-14 md:h-screen text-white snap-center snap-always">
-      <div className="md:max-w-7xl flex flex-col md:flex-row overflow-y-scroll">
+      <div className="md:max-w-7xl flex flex-col md:flex-row overflow-hidden">
         <motion.div
           initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -51,10 +51,10 @@ export const About = () => {
             initial='hidden'
             whileInView='visible'
             viewport={{ once: true }}
-            className="flex md:flex-wrap justify-center items-center ">
-          <motion.img variants={item}  src={memoji3} alt="memoji" className="w-32 md:w-64" />
-          <motion.img variants={item} src={memoji1} alt="memoji" className="w-32 md:w-64" />
-          <motion.img variants={item} src={memoji2} alt="memoji" className="w-32 md:w-64" />
+            className="flex md:flex-wrap justify-center items-center  ">
+          <motion.img variants={item}  src={memoji3} alt="memoji" className="w-32 md:w-52" />
+          <motion.img variants={item} src={memoji1} alt="memoji" className="w-32 md:w-52" />
+          <motion.img variants={item} src={memoji2} alt="memoji" className="w-32 md:w-52" />
         </motion.div>
       </div>
     </div>

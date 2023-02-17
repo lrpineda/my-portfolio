@@ -29,7 +29,7 @@ function Intro() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         exit={{ opacity: 0, display: 'none' }}
-        className='flex h-screen md:h-screen w-screen  snap-center items-center justify-center flex-col'>
+        className='flex h-screen md:h-screen   snap-center items-center justify-center flex-col'>
         <motion.div
           variants={container}
           initial='hidden'

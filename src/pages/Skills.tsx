@@ -27,7 +27,7 @@ const Skills = ({setDark}:Props) => {
   }, [inView]);
   
   return (
-    <div ref={ref} className='md:h-screen w-screen snap-center snap-always bg-[#232425] pb-11 text-white justify-center mx-auto flex gap-6 flex-col items-center'>
+    <div ref={ref} className='md:h-screen  snap-center snap-always bg-[#232425] pb-11 text-white justify-center mx-auto flex gap-6 flex-col items-center'>
        <motion.h2 
         initial={{ y: 200, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

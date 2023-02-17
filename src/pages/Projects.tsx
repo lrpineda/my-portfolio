@@ -16,8 +16,8 @@ const Projects = ({setDark}:Props) => {
   }, [inView]);
 
   return (
-    <div ref={ref}  className='pt-8 md:pt-0 bg-slate-50 md:h-screen md:w-screen relative overflow-scroll flex flex-col gap-3 snap-center snap-always items-center justify-center z-0 '>
-      <ul className='flex overflow-y-scroll  flex-col md:grid md:grid-cols-3 items-center gap-4 max-w-3xl'>
+    <div ref={ref}  className='pt-8 md:pt-0 bg-slate-50 md:h-screen  relative  flex flex-col gap-3 snap-center snap-always items-center justify-center z-0 '>
+      <ul className='flex  overflow-hidden flex-col md:grid md:grid-cols-3 items-center gap-4 md:max-w-3xl xl:max-w-5xl'>
         {projectData.map((project, index) => (
           <Project {...project} key={index} />
         ))}

@@ -13,12 +13,12 @@ function Header({dark}: Props) {
       whileInView={{opacity: 1, y: 0}}
       transition={{delay: 0.3}}
 
-      className={`sticky top-0 max-w-7xl p-4 md:p-7 flex justify-between mx-auto z-10  ${dark ? 'text-white': 'text-black'} `}>
+      className={`md:sticky top-0 max-w-7xl p-4 md:p-7 flex justify-center md:justify-between mx-auto z-10  ${dark ? 'text-white': 'text-black'} `}>
       <motion.h1 
         initial={{ opacity: 0, x: -100 }}
         whileInView={{opacity: 1, x: 0}}
         transition={{delay: 0.4}}
-        className='text-xl lg:text-[24px] font-thin tracking-wider'>LUIS PINEDA</motion.h1>
+        className='text-xl lg:text-[24px] font-extralight tracking-wider'>LUIS PINEDA</motion.h1>
       <Nav dark={dark} />
     </motion.div>
   )

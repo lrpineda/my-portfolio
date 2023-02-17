@@ -25,7 +25,7 @@ export default function SubMenu({ dark, title, setDark }: Props) {
       ref={ref}
       id={title}
       className={`${dark ? "bg-[#232425] text-white" : "bg-slate-50"
-        } md:h-screen  w-screen snap-center snap-always flex justify-center md:items-end  py-16 md:py-0`}
+        } md:h-screen   snap-center flex justify-center md:items-end  py-16 md:py-0`}
     >
 
       <motion.svg
