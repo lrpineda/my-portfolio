@@ -8,6 +8,13 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import Image from "./Image";
 import Content from "./Content";
 
+const item = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1
+        
+    }
+}
 
 type Props = {
     highlight: boolean;
@@ -25,7 +32,9 @@ const Project = (props: Props) => {
     const cardRef = useRef(null);
 
     return (
-        <li className={` relative overflow-hidden flex bg-white h-52 w-80 text-black rounded-xl  ${highlight ? ' md:col-span-3 md:mx-auto md:w-[748px] xl:w-[1000px]  md:h-[480px] xl:h-[540px] ' : ' md:w-60 md:h-40 xl:w-80 xl:h-52  '}`}>
+        <motion.li 
+            variants={item}
+            className={` relative overflow-hidden flex bg-white h-52 w-80 text-black rounded-xl  ${highlight ? ' md:col-span-3 md:mx-auto md:w-[748px] xl:w-[1000px]  md:h-[480px] xl:h-[540px] ' : ' md:w-60 md:h-40 xl:w-80 xl:h-52  '}`}>
             {isVisible && (
                 <motion.div
                     initial={false}
@@ -59,7 +68,7 @@ const Project = (props: Props) => {
                     onClick={() => setIsVisible(!isVisible)}
                 ></div>
             )}
-        </li>
+        </motion.li>
     )
 }
 
