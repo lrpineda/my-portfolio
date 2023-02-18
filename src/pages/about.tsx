@@ -34,16 +34,13 @@ export const About = () => {
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="flex flex-col gap-5 text-2xl text-center lg:text-left md:gap-10 md:text-5xl p-9 md:max-w-3xl"
+          className="flex flex-col gap-5 text-2xl text-center lg:text-left md:gap-10 md:text-4xl p-9 md:max-w-3xl"
         >
           <h2>
-            I am currently a Software QA Engineer based in Utah, working on my
-            Computer Engineering degree at Utah Valley University.
+          I am a software QA engineer based in Utah, with a passion for building and testing high-quality software products. I am currently pursuing a degree in Computer Engineering at Utah Valley University, with the ultimate goal of becoming a software developer. 
           </h2>
           <h2>
-            I am excited to continue to work on adding more projects to my
-            portfolio and look forward to collaborating with new people in the
-            web development space.
+          My technical skills and industry knowledge have equipped me to work comfortably across both front-end and back-end development environments. With a strong work ethic and dedication to advancing my skill set, I am confident that I can achieve my professional goals and make a meaningful impact in the technology industry.
           </h2>
         </motion.div>
         <motion.div
