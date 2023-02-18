@@ -19,7 +19,7 @@ export const Hero = ({ setDark }: any) => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.25, type: 'spring', stiffness: 200 }}
                         viewport={{ once: true }}
-                        className='text-3xl md:text-7xl  xl:text-6xl text-center px-3 py-12 2xl:max-w-7xl'>
+                        className='text-3xl md:text-6xl  xl:text-6xl text-center px-3 py-12 2xl:max-w-7xl'>
                         Building web applications from front-end to back-end! Aspiring full stack developer with a passion for creating beautiful, functional and responsive digital experiences.
                     </motion.h2>
                     <motion.div
