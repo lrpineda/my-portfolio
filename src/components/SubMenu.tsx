@@ -31,7 +31,7 @@ export default function SubMenu({ dark, title, setDark }: Props) {
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1508 179"
-        className="w-96 md:w-full max-w-2xl md:max-w-7xl py-9"
+        className="w-96 md:w-full max-w-2xl lg:max-w-7xl py-9"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}

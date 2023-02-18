@@ -34,7 +34,7 @@ const Project = (props: Props) => {
     return (
         <motion.li 
             variants={item}
-            className={` relative overflow-hidden flex bg-white h-52 w-80 text-black rounded-xl  ${highlight ? ' md:col-span-3 md:mx-auto md:w-[748px] xl:w-[1000px]  md:h-[480px] xl:h-[540px] ' : ' md:w-60 md:h-40 xl:w-80 xl:h-52  '}`}>
+            className={` relative overflow-hidden flex bg-white h-48 w-80 text-black rounded-xl  ${highlight ? ' md:col-span-3 md:mx-auto md:w-[748px] xl:w-[1000px] md:h-[450px] xl:h-[540px] ' : ' md:w-60 md:h-40 xl:w-80 xl:h-52  '}`}>
             {isVisible && (
                 <motion.div
                     initial={false}
@@ -51,14 +51,27 @@ const Project = (props: Props) => {
                 <AnimatePresence>
                     <motion.div
                         ref={cardRef}
-                        className={` bg-zinc-800 text-white rounded-xl m-auto ${isVisible ? "fixed top-0 left-0 right-0 bottom-0 overflow-hidden w-screen lg:w-[1000px]  lg:h-[780px] xl:h-[800px] z-30 " : "relative w-full h-full z-10"}`}
+                        className={` bg-zinc-800 text-white md:rounded-xl m-auto ${isVisible ? "rounded-none fixed top-0 left-0 right-0 bottom-0 overflow-hidden w-screen lg:w-[1000px] lg:h-max  z-30 " : "relative w-full h-full z-10"}`}
                         layout
                         transition={isVisible ? openSpring : closeSpring}
+                        onDrag={(_, info) => {
+                            if (info.offset.y > 100) {
+                                setIsVisible(false);
+                            }
+                        }}
+                        drag="y"
+                        dragConstraints={cardRef}
+                        dragElastic={0.2}
+                      
+
 
                     >
-                        {isVisible && (<p onClick={() => setIsVisible(!isVisible)}><AiFillCloseCircle className=" text-white border-2 rounded-full bg-black hover:text-black hover:bg-white transition-all duration-500 ease-in-out absolute top-3 right-3 z-40 h-9 w-9 cursor-pointer" /></p>)}
+                        <div className="flex flex-col  justify-center items-center">
+                        {isVisible && (<p onClick={() => setIsVisible(!isVisible)}><AiFillCloseCircle className="hidden md:flex text-white border-2 rounded-full bg-black hover:text-black hover:bg-white transition-all duration-500 ease-in-out absolute top-3 right-3 z-40 h-9 w-9 cursor-pointer" /></p>)}
                         <Image image={image} isVisible />
                         <Content title={title} description={description} technologies={technologies} link={website} github={github} />
+
+                        </div>
                     </motion.div>
                 </AnimatePresence>
             </div>

@@ -13,7 +13,7 @@ type Props = {
 const Content = ({ title, description, technologies, link, github }: Props) => {
     return (
         <motion.div 
-            className='pt-80 lg:pt-[560px] flex flex-col md:flex-row justify-center items-center gap-6 px-7 w-full'>
+            className='pt-6 pb-12 flex flex-col md:flex-row justify-center items-center gap-6 px-7 w-full'>
             <div className='flex flex-col max-w-lg'>
                 <h1 className='text-2xl font-bold pt-2'>{title}</h1>
                 <p className='py-3'>{description}</p>

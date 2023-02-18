@@ -28,13 +28,13 @@ const item = {
 export const About = () => {
   return (
     <div className="bg-[#232425] flex items-center justify-center pb-14 md:h-screen text-white snap-center snap-always">
-      <div className="md:max-w-7xl flex flex-col md:flex-row overflow-hidden">
+      <div className="lg:max-w-7xl flex flex-col lg:flex-row overflow-hidden">
         <motion.div
           initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="flex flex-col gap-5 text-2xl text-center md:text-left md:gap-10 md:text-5xl p-9 md:max-w-3xl"
+          className="flex flex-col gap-5 text-2xl text-center lg:text-left md:gap-10 md:text-5xl p-9 md:max-w-3xl"
         >
           <h2>
             I am currently a Software QA Engineer based in Utah, working on my
