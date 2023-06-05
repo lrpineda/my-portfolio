@@ -14,7 +14,7 @@ import Contact from './pages/Contact';
 function App() {
   const [dark, setDark] = useState(false);
   return (
-    <div className="h-full  snap-y snap-mandatory md:visible text-black bg-slate-50 z-0 ">
+    <div className="h-full  snap-y snap-mandatory md:visible text-black bg-slate-50 z-0">
       
         <Intro />
         <Header dark={dark} />
