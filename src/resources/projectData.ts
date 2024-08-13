@@ -22,7 +22,7 @@ const projectData = [
         title: 'Home Inspection',
         description: 'This website was created to help Strategic Investment Home Inspection LLC promote and run their business.',
         github: 'https://github.com/GerusHays/Home-Inspection',
-        website: 'https://strategic-home-inspection.herokuapp.com/',
+        website: 'https://home-inspection.onrender.com',
         technologies: 'Handlebars NodeJS Passport Mysql Sequelize',
         image: 'homeinspection.png',
         highlight: false
